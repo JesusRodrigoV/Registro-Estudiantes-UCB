@@ -1,1 +1,9 @@
-<p>header works!</p>
+<header class="header-container">
+  <nav>
+    <ul>
+      @for (button of buttons; track button.route) {
+        <app-button [button]="button"></app-button>
+      }
+    </ul>
+  </nav>
+</header>
