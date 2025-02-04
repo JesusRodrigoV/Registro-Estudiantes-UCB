@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
 import { Button } from "../../../models/button.model";
 import { RouterLink } from "@angular/router";
 
@@ -7,6 +7,7 @@ import { RouterLink } from "@angular/router";
 	imports: [RouterLink],
 	templateUrl: "./button.component.html",
 	styleUrl: "./button.component.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
 	@Input({ required: true }) button: Button = {

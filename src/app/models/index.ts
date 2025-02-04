@@ -1,1 +1,2 @@
-export * from "../models/";
+export * from "./button.model";
+export * from "./student.model";
