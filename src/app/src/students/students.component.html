@@ -1,18 +1,35 @@
-<p>students works!</p>
-<div>
-  <table>
-    <thead>
-      <tr></tr>
-    </thead>
-    <tbody>
-      @if (students$ | async; as students) {
-        @for (student of students; track student.id) {
-          <tr>
-            <th></th>
-            <th></th>
-          </tr>
+@defer {
+  <p>students works!</p>
+  <div>
+    <table>
+      <thead #encabezado>
+        <tr>
+          @for (header of headerKeys; track header) {
+            <th>{{ header }}</th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @defer (on viewport(encabezado)) {
+          @if (students$ | async; as students) {
+            @for (student of students; track student.id) {
+              <tr>
+                <th></th>
+                <th></th>
+              </tr>
+            }
+          }
+        } @placeholder {
+          <p>Del placeholder</p>
+          <mat-spinner mode="indeterminate" diameter="75"></mat-spinner>
+        } @loading (minimum 1s; after 500ms) {
+          <mat-spinner mode="indeterminate" diameter="75"></mat-spinner>
+        } @error {
+          <div class="error-container">
+            <p>Error al cargar los datos de estudiantes</p>
+          </div>
         }
-      }
-    </tbody>
-  </table>
-</div>
+      </tbody>
+    </table>
+  </div>
+}
