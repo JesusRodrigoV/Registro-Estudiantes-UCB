@@ -22,7 +22,18 @@ import { StudentsService } from "@app/services/students";
 export class FormRegistroComponent {
 	private _snackBar = inject(MatSnackBar);
 	private studentsService = inject(StudentsService);
-
+	newStudent: Student = {
+		id: 0,
+		nombre: "",
+		apellidoPaterno: "",
+		apellidoMaterno: "",
+		fechaNacimiento: "",
+		ci: "",
+		direccion: "",
+		numCelular: "",
+		email: "",
+		carrera: "",
+	};
 	addStudent(student: Student) {
 		this.studentsService.addStudent(student).subscribe({
 			next: () => {
