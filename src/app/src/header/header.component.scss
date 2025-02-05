@@ -1,4 +1,23 @@
 .header-container {
-  border: 2px solid black;
-  padding: 5px;
+  background-color: #002b5c;
+  padding: 15px 30px;
+  display: flex;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 180px; 
+    height: auto; 
+    margin-right: 200px; 
+    border-radius: 3px;
+  }
 }
+
+
