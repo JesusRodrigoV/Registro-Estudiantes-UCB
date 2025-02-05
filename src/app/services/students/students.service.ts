@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
 	providedIn: "root",
 })
 export class StudentsService {
-	private mainUrl = "http:localhost:4000/api";
+	private mainUrl = "http://localhost:4000/api";
 	private studentsUrl = this.mainUrl + "/students";
 
 	http = inject(HttpClient);

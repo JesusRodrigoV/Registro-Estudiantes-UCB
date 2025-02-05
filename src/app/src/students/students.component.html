@@ -1,55 +1,35 @@
-<div class="table-container">
-  <h2>Lista de Estudiantes Registrados</h2>
-  <table class="students-table">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Carrera</th>
-        <th>Fecha de Nacimiento</th>
-        <th>Correo Electrónico</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Juan</td>
-        <td>Pérez</td>
-        <td>Ingeniería</td>
-        <td>1999-03-15</td>
-        <td>juan.perez&#64;gmail.com</td>
-      </tr>
-      <tr>
-        <td>Maria</td>
-        <td>Gómez</td>
-        <td>Medicina</td>
-        <td>2000-08-22</td>
-        <td>maria.gomez&#64;gmail.com</td>
-      </tr>
-      <tr>
-        <td>Pedro</td>
-        <td>Rodríguez</td>
-        <td>Derecho</td>
-        <td>1998-11-10</td>
-        <td>pedro.rodriguez&#64;gmail.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<div>
-  <table>
-    <thead>
-      <tr></tr>
-    </thead>
-    <tbody>
-      @if (students$ | async; as students) {
-        @for (student of students; track student.id) {
-          <tr>
-            <th></th>
-            <th></th>
-          </tr>
+@defer {
+  <div class="table-container">
+    <h2>Lista de Estudiantes Registrados</h2>
+    <table class="students-table">
+      <thead #encabezado>
+        <tr>
+          @for (header of headerKeys; track header) {
+            <th>{{ header }}</th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @defer (on viewport(encabezado)) {
+          @if (students$ | async; as students) {
+            @for (student of students; track student.id) {
+              <tr>
+                <th></th>
+                <th></th>
+              </tr>
+            }
+          }
+        } @placeholder {
+          <p>Del placeholder</p>
+          <mat-spinner mode="indeterminate" diameter="75"></mat-spinner>
+        } @loading (minimum 1s; after 500ms) {
+          <mat-spinner mode="indeterminate" diameter="75"></mat-spinner>
+        } @error {
+          <div class="error-container">
+            <p>Error al cargar los datos de estudiantes</p>
+          </div>
         }
-      }
-    </tbody>
-  </table>
-</div>
+      </tbody>
+    </table>
+  </div>
+}
