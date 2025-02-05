@@ -17,6 +17,7 @@ export class StudentsComponent {
 
 	protected students$: Observable<Student[]> =
 		this.studentsService.getStudents();
+		
 
 	protected headerKeys: String[] = [
 		"Nombre",
