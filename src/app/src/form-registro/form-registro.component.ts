@@ -24,16 +24,16 @@ export class FormRegistroComponent {
 	private _snackBar = inject(MatSnackBar);
 	private studentsService = inject(StudentsService);
 	newStudent: Student = {
-		id: 0,
-		nombre: "",
-		apellidoPaterno: "",
-		apellidoMaterno: "",
-		fechaNacimiento: "",
-		ci: "",
-		direccion: "",
-		numCelular: "",
-		email: "",
-		carrera: "",
+		id_est: 0,
+		ci_est: "",
+		nombre_est: "",
+		appat_est: "",
+		apmat_est: "",
+		fnac_est: "",
+		dir_est: "",
+		ncel_est: "",
+		coints_est: "",
+		carrera_est: "",
 	};
 
 	addStudent() {
