@@ -1,35 +1,45 @@
 @defer {
   <div class="form-container">
     <h2>Registro de Estudiante</h2>
-    <form action="#" method="POST">
+    <form (ngSubmit)="onSubmit($event)">
       <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required />
+        <label for="nombre_est">Nombre</label>
+        <input type="text" id="nombre_est" name="nombre_est" required />
       </div>
 
       <div class="form-group">
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido" required />
+        <label for="appat_est">Apellido Paterno</label>
+        <input type="text" id="appat_est" name="appat_est" required />
       </div>
 
       <div class="form-group">
-        <label for="carrera">Carrera</label>
-        <select id="carrera" name="carrera" required>
-          <option value="Ingeniería">Ingeniería</option>
-          <option value="Administración">Administración</option>
-          <option value="Medicina">Medicina</option>
-          <option value="Derecho">Derecho</option>
-        </select>
+        <label for="apmat_est">Apellido Materno</label>
+        <input type="text" id="apmat_est" name="apmat_est" required />
       </div>
 
       <div class="form-group">
-        <label for="nacimiento">Fecha de Nacimiento</label>
-        <input type="date" id="nacimiento" name="nacimiento" required />
+        <label for="fnac_est">Fecha de Nacimiento</label>
+        <input type="date" id="fnac_est" name="fnac_est" required />
       </div>
 
       <div class="form-group">
-        <label for="email">Correo Electrónico (Gmail)</label>
-        <input type="email" id="email" name="email" required />
+        <label for="ci_est">CI</label>
+        <input type="text" id="ci_est" name="ci_est" required />
+      </div>
+
+      <div class="form-group">
+        <label for="dir_est">Dirección</label>
+        <textarea id="dir_est" name="dir_est" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="ncel_est">Número de Celular</label>
+        <input type="text" id="ncel_est" name="ncel_est" required />
+      </div>
+
+      <div class="form-group">
+        <label for="coins_est">Correo Institucional</label>
+        <input type="email" id="coins_est" name="coins_est" required />
       </div>
 
       <div class="form-group">

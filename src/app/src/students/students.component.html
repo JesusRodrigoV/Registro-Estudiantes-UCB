@@ -14,11 +14,15 @@
           @if (students$ | async; as students) {
             @for (student of students; track student.id) {
               <tr>
-                <th>{{ student.nombre }}</th>
-                <th>{{ student.apellido }}</th>
-                <th>{{ student.carrera }}</th>
-                <th>{{ student.fechaNacimiento }}</th>
-                <th>{{ student.email }}</th>
+                <td>{{ student.nombre }}</td>
+                <td>{{ student.apellidoPaterno }}</td>
+                <td>{{ student.apellidoMaterno }}</td>
+                <td>{{ student.fechaNacimiento }}</td>
+                <td>{{ student.ci }}</td>
+                <td>{{ student.direccion }}</td>
+                <td>{{ student.numCelular }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.carrera }}</td>
               </tr>
             }
           }
