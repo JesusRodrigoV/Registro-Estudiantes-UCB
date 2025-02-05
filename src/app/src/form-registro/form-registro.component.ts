@@ -15,7 +15,7 @@ import { StudentsService } from "@app/services/students";
 	providers: [
 		{
 			provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
-			useValue: { duration: 3000 },
+			useValue: { duration: 5000 },
 		},
 	],
 })
@@ -24,13 +24,16 @@ export class FormRegistroComponent {
 	private studentsService = inject(StudentsService);
 
 	addStudent(student: Student) {
+		console.log("Entre a agregar un estudiante:");
 		this.studentsService.addStudent(student).subscribe({
 			next: () => {
+				console.log("Lo agregué");
 				this._snackBar.open("Estudiante registrado", "Ok", {
 					panelClass: ["snackbar-success"],
 				});
 			},
 			error: () => {
+				console.log("Hay error");
 				this._snackBar.open("Error al registrar estudiante", "Ok", {
 					panelClass: ["snackbar-error"],
 				});
@@ -60,7 +63,7 @@ export class FormRegistroComponent {
 			email: (document.getElementById("email") as HTMLInputElement).value,
 			carrera: (document.getElementById("carrera") as HTMLInputElement).value,
 		};
-
+console.log("SI estoy recibiendo los datos");
 		this.addStudent(student);
 	}
 }

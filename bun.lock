@@ -18,6 +18,7 @@
         "@angular/ssr": "^19.1.4",
         "express": "^4.18.2",
         "ng": "^0.0.0",
+        "registro-estudiantes": "file:",
         "rxjs": "~7.8.0",
         "tslib": "^2.3.0",
         "zone.js": "~0.15.0",
@@ -1410,6 +1411,8 @@
 
     "regexpu-core": ["regexpu-core@6.2.0", "", { "dependencies": { "regenerate": "^1.4.2", "regenerate-unicode-properties": "^10.2.0", "regjsgen": "^0.8.0", "regjsparser": "^0.12.0", "unicode-match-property-ecmascript": "^2.0.0", "unicode-match-property-value-ecmascript": "^2.1.0" } }, "sha512-H66BPQMrv+V16t8xtmq+UC0CBpiTBA60V8ibS1QVReIp8T1z8hwFxqcGzm9K6lgsN7sB5edVH8a+ze6Fqm4weA=="],
 
+    "registro-estudiantes": ["registro-estudiantes@file:", { "dependencies": { "@angular/animations": "^19.1.0", "@angular/cdk": "19.1.2", "@angular/common": "^19.1.0", "@angular/compiler": "^19.1.0", "@angular/core": "^19.1.0", "@angular/forms": "^19.1.0", "@angular/material": "19.1.2", "@angular/platform-browser": "^19.1.0", "@angular/platform-browser-dynamic": "^19.1.0", "@angular/platform-server": "^19.1.0", "@angular/router": "^19.1.0", "@angular/ssr": "^19.1.4", "express": "^4.18.2", "ng": "^0.0.0", "registro-estudiantes": "file:", "rxjs": "~7.8.0", "tslib": "^2.3.0", "zone.js": "~0.15.0" }, "devDependencies": { "@angular-devkit/build-angular": "^19.1.4", "@angular/cli": "^19.1.4", "@angular/compiler-cli": "^19.1.0", "@types/express": "^4.17.17", "@types/jasmine": "~5.1.0", "@types/node": "^18.18.0", "jasmine-core": "~5.5.0", "karma": "~6.4.0", "karma-chrome-launcher": "~3.2.0", "karma-coverage": "~2.2.0", "karma-jasmine": "~5.1.0", "karma-jasmine-html-reporter": "~2.1.0", "typescript": "~5.7.2" } }],
+
     "regjsgen": ["regjsgen@0.8.0", "", {}, "sha512-RvwtGe3d7LvWiDQXeQw8p5asZUmfU1G/l6WbUXeHta7Y2PEIvBTwH6E2EfmYUK8pxcxEdEmaomqyp0vZZ7C+3Q=="],
 
     "regjsparser": ["regjsparser@0.12.0", "", { "dependencies": { "jsesc": "~3.0.2" }, "bin": { "regjsparser": "bin/parser" } }, "sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ=="],
@@ -1893,6 +1896,8 @@
     "proxy-addr/ipaddr.js": ["ipaddr.js@1.9.1", "", {}, "sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g=="],
 
     "raw-body/iconv-lite": ["iconv-lite@0.4.24", "", { "dependencies": { "safer-buffer": ">= 2.1.2 < 3" } }, "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA=="],
+
+    "registro-estudiantes/registro-estudiantes": ["registro-estudiantes@file:.", {}],
 
     "regjsparser/jsesc": ["jsesc@3.0.2", "", { "bin": { "jsesc": "bin/jsesc" } }, "sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g=="],
 
