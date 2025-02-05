@@ -25,7 +25,7 @@ export class StudentsService {
 	}
 
 	addStudent(student: Student): Observable<Student> {
-		return this.http.post<Student>(this.studentsUrl, student, this.httpOptions);
+		return this.http.post<Student>(this.studentsUrl, student);
 	}
 
 	updateStudent(ci_est: string, student: Partial<Student>): Observable<{ message: string }> {
