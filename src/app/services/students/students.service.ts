@@ -7,7 +7,7 @@ import { Student } from "@app/models/student.model";
 	providedIn: "root",
 })
 export class StudentsService {
-	private mainUrl = "http://localhost:4000/";
+	private mainUrl = "http://localhost:4000";
 	private studentsUrl = `${this.mainUrl}/students`;
 
 	http = inject(HttpClient);
@@ -25,7 +25,7 @@ export class StudentsService {
 	}
 
 	addStudent(student: Student): Observable<Student> {
-		return this.http.post<Student>(this.studentsUrl, student);
+		return this.http.post<Student>(this.studentsUrl, student, this.httpOptions);
 	}
 
 	updateStudent(ci_est: string, student: Partial<Student>): Observable<{ message: string }> {
