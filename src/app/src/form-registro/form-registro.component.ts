@@ -5,10 +5,11 @@ import {
 	MAT_SNACK_BAR_DEFAULT_OPTIONS,
 } from "@angular/material/snack-bar";
 import { StudentsService } from "@app/services/students";
+import { FormsModule } from "@angular/forms";
 
 @Component({
 	selector: "app-form-registro",
-	imports: [],
+	imports: [FormsModule],
 	templateUrl: "./form-registro.component.html",
 	styleUrl: "./form-registro.component.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,
@@ -34,10 +35,11 @@ export class FormRegistroComponent {
 		email: "",
 		carrera: "",
 	};
-	addStudent(student: Student) {
+
+	addStudent() {
 		console.log("Entre a agregar un estudiante:");
-		this.studentsService.addStudent(student).subscribe({
-			next: () => {
+		this.studentsService.addStudent(this.newStudent).subscribe({
+			next: (response) => {
 				console.log("Lo agregué");
 				this._snackBar.open("Estudiante registrado", "Ok", {
 					panelClass: ["snackbar-success"],
@@ -50,31 +52,5 @@ export class FormRegistroComponent {
 				});
 			},
 		});
-	}
-
-	onSubmit(event: Event): void {
-		event.preventDefault();
-		const student: Student = {
-			id: 0, // assuming id is auto-generated or not needed for creation
-			nombre: (document.getElementById("nombre") as HTMLInputElement).value,
-			apellidoPaterno: (
-				document.getElementById("apellidoPaterno") as HTMLInputElement
-			).value,
-			apellidoMaterno: (
-				document.getElementById("apellidoMaterno") as HTMLInputElement
-			).value,
-			fechaNacimiento: (
-				document.getElementById("fechaNacimiento") as HTMLInputElement
-			).value,
-			ci: (document.getElementById("ci") as HTMLInputElement).value,
-			direccion: (document.getElementById("direccion") as HTMLTextAreaElement)
-				.value,
-			numCelular: (document.getElementById("numCelular") as HTMLInputElement)
-				.value,
-			email: (document.getElementById("email") as HTMLInputElement).value,
-			carrera: (document.getElementById("carrera") as HTMLInputElement).value,
-		};
-console.log("SI estoy recibiendo los datos");
-		this.addStudent(student);
 	}
 }

@@ -1,25 +1,49 @@
 @defer {
   <div class="form-container">
-    <h2>Registro de Estudiante</h2>
-    <form (ngSubmit)="onSubmit($event)">
+    <h2>Registro de newStudent</h2>
+    <form (ngSubmit)="addStudent()" #studentForm="ngForm">
       <div class="form-group">
         <label for="nombre_est">Nombre</label>
-        <input type="text" id="nombre_est" name="nombre_est" required />
+        <input
+          type="text"
+          id="nombre_est"
+          name="nombre_est"
+          [(ngModel)]="newStudent.nombre"
+          required
+        />
       </div>
 
       <div class="form-group">
         <label for="appat_est">Apellido Paterno</label>
-        <input type="text" id="appat_est" name="appat_est" required />
+        <input
+          type="text"
+          id="appat_est"
+          name="appat_est"
+          [(ngModel)]="newStudent.apellidoPaterno"
+          required
+        />
       </div>
 
       <div class="form-group">
         <label for="apmat_est">Apellido Materno</label>
-        <input type="text" id="apmat_est" name="apmat_est" required />
+        <input
+          type="text"
+          id="apmat_est"
+          name="apmat_est"
+          [(ngModel)]="newStudent.apellidoMaterno"
+          required
+        />
       </div>
 
       <div class="form-group">
         <label for="fnac_est">Fecha de Nacimiento</label>
-        <input type="date" id="fnac_est" name="fnac_est" required />
+        <input
+          type="date"
+          id="fnac_est"
+          name="fnac_est"
+          [(ngModel)]="newStudent.fechaNacimiento"
+          required
+        />
       </div>
 
       <div class="form-group">
@@ -29,17 +53,35 @@
 
       <div class="form-group">
         <label for="dir_est">Dirección</label>
-        <textarea id="dir_est" name="dir_est" required></textarea>
+        <textarea
+          id="dir_est"
+          name="dir_est"
+          [(ngModel)]="newStudent.direccion"
+          required
+        ></textarea>
       </div>
 
       <div class="form-group">
         <label for="ncel_est">Número de Celular</label>
-        <input type="text" id="ncel_est" name="ncel_est" required />
+        <input
+          type="text"
+          id="ncel_est"
+          name="ncel_est"
+          [(ngModel)]="newStudent.numCelular"
+          required
+        />
       </div>
 
       <div class="form-group">
         <label for="coins_est">Correo Institucional</label>
-        <input type="email" id="coins_est" name="coins_est" required />
+        <input
+          type="email"
+          id="coins_est"
+          name="coins_est"
+          [(ngModel)]="newStudent.email"
+          required
+        />
+        required />
       </div>
 
       <div class="form-group">
