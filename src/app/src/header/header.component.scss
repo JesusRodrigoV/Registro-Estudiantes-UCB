@@ -18,6 +18,34 @@
     margin-right: 200px; 
     border-radius: 3px;
   }
+
+
+/* Media Query para vista movil */
+@media (max-width: 768px) {
+  padding: 10px 20px; 
+
+  .logo {
+    width: 150px; 
+    margin-right: 50px; 
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    margin-top: 10px;
+  }
 }
 
+/* Pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .logo {
+    width: 120px;
+  }
+
+  nav ul {
+    gap: 10px; 
+  }
+}
+}
 

@@ -99,3 +99,59 @@ $background-color: #f4f4f4;
   }
 }
 
+/* Estilos para dispositivos moviles */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 20px;
+
+    .hero-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px; 
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .section {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .about-img {
+    max-width: 100%; /* En moviles, la imagen se adapta al tamaño de la pantalla */
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr; /* Una sola columna en moviles */
+    gap: 10px;
+
+    .program {
+      padding: 15px;
+
+      .program-img {
+        max-height: 200px; /* Reduce tamaño de imagenes de programas */
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
