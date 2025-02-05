@@ -1,6 +1,6 @@
 @defer {
   <div class="form-container">
-    <h2>Registro de newStudent</h2>
+    <h2>Registro de Estudiantes</h2>
     <form (ngSubmit)="addStudent()" #studentForm="ngForm">
       <div class="form-group">
         <label for="nombre_est">Nombre</label>
@@ -48,7 +48,7 @@
 
       <div class="form-group">
         <label for="ci_est">CI</label>
-        <input type="text" id="ci_est" name="ci_est" required />
+        <input type="text" id="ci_est" name="ci_est" required [(ngModel)]="newStudent.ci_est"/>
       </div>
 
       <div class="form-group">
@@ -78,9 +78,26 @@
           type="email"
           id="coins_est"
           name="coins_est"
-          [(ngModel)]="newStudent.coints_est"
+          [(ngModel)]="newStudent.coins_est"
           required
         />
+      </div>
+
+      <div class="form-group">
+        <label for="carrera">Selecciona tu carrera:</label>
+        <select id="carrera" name="carrera" [(ngModel)]="newStudent.carrera_est">
+          <option value="">-- Selecciona una opción --</option>
+          <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+          <option value="Ingenieria Civil">Ingeniería Civil</option>
+          <option value="Ingenieria Industrial">Ingeniería Industrial</option>
+          <option value="Medicina">Medicina</option>
+          <option value="Derecho">Derecho</option>
+          <option value="Arquitectura">Arquitectura</option>
+          <option value="Administracion Empresas">Administración de Empresas</option>
+          <option value="Contaduria">Contaduría Pública</option>
+          <option value="Psicologia">Psicología</option>
+          <option value="Comunicacion Social">Comunicación Social</option>
+        </select>
       </div>
 
       <div class="form-group">

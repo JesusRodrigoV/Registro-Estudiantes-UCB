@@ -24,15 +24,14 @@ export class FormRegistroComponent {
 	private _snackBar = inject(MatSnackBar);
 	private studentsService = inject(StudentsService);
 	newStudent: Student = {
-		id_est: 0,
 		ci_est: "",
 		nombre_est: "",
 		appat_est: "",
 		apmat_est: "",
-		fnac_est: "",
+		fnac_est: new Date(),
 		dir_est: "",
 		ncel_est: "",
-		coints_est: "",
+		coins_est: "",
 		carrera_est: "",
 	};
 

@@ -4,6 +4,7 @@ import { Student } from "@app/models";
 import { StudentsService } from "@app/services/students";
 import { Observable } from "rxjs";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { tap } from "rxjs/operators";
 
 @Component({
 	selector: "app-students",
@@ -29,4 +30,5 @@ export class StudentsComponent {
 		"Correo Institucional",
 		"Carrera",
 	];
+
 }

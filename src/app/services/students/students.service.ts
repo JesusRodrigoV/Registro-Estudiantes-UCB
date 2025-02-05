@@ -32,7 +32,6 @@ export class StudentsService {
 		return this.http.put<{ message: string }>(`${this.studentsUrl}/${ci_est}`, student, this.httpOptions);
 	}
 
-	// Eliminar estudiante
 	deleteStudent(ci_est: string): Observable<{ message: string }> {
 		return this.http.delete<{ message: string }>(`${this.studentsUrl}/${ci_est}`);
 	}
