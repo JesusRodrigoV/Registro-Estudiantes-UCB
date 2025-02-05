@@ -30,7 +30,10 @@
 								"input": "public"
 							}
 						],
-						"styles": ["src/styles.scss"],
+						"styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
+              "src/styles.scss"
+            ],
 						"scripts": [],
 						"server": "src/main.server.ts",
 						"outputMode": "server",
@@ -89,11 +92,17 @@
 								"input": "public"
 							}
 						],
-						"styles": ["src/styles.scss"],
+						"styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
+              "src/styles.scss"
+            ],
 						"scripts": []
 					}
 				}
 			}
 		}
-	}
+  },
+  "cli": {
+    "analytics": "aba1d9a1-f9b8-4d41-8f93-051568586d8b"
+  }
 }

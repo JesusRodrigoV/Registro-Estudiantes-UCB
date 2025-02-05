@@ -4,8 +4,12 @@ import { HomeComponent } from "./src/home";
 import { StudentsComponent } from "./src/students";
 
 export const routes: Routes = [
-	{ path: "", component: HomeComponent },
-	{ path: "home", component: HomeComponent },
-	{ path: "register", component: FormRegistroComponent },
-	{ path: "students", component: StudentsComponent },
+	{ path: "", component: HomeComponent, title: "Inicio" },
+	{ path: "home", component: HomeComponent, title: "Inicio" },
+	{
+		path: "register",
+		component: FormRegistroComponent,
+		title: "Registro Estudiantes",
+	},
+	{ path: "students", component: StudentsComponent, title: "Estudiantes" },
 ];

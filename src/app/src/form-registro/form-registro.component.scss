@@ -1,0 +1,111 @@
+.form-container {
+    background-color: #f4f4f4;
+    padding: 40px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #003366; 
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #003366; 
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="date"] {
+    padding: 10px; 
+  }
+  
+  button.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #003366; 
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button.submit-btn:hover {
+    background-color: #0055a5; 
+  }
+
+  /* Media Query para dispositivos moviles */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input, select, button.submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button.submit-btn {
+    padding: 12px;
+  }
+}
+
+/* pantallas mas pequeñas */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input, select, button.submit-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  button.submit-btn {
+    padding: 10px;
+  }
+}
+
+  
+  
